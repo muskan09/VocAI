@@ -1,1 +1,2 @@
 # VocaAI
+#### Built an AI voice assistant using OpenAI APIs (latest GPT 4, Large Language Model (LLM)) and Whisper API to convert audio speech to text. Also used the new TTS (text-to-speech) API to convert text to speech. Used Swift UI to build this app. App supports iOS, macOS and visionOS using just one codebase.
