@@ -11,17 +11,18 @@ import SiriWaveView
 struct ContentView: View {
     
     @State var vm = ViewModel()
+    @State var isSymbolAnimating = false
     
     var body: some View {
         VStack(spacing: 16) {
-            Text("VocaAI - Your New AI Voice Assistant").font(.title2)
+            Text("VocAI - Your New AI Voice Assistant").font(.title2)
             
             Spacer()
             SiriWaveView().power(power: vm.audioPower).opacity(vm.siriWaveFormOpacity).frame(height: 256).overlay{ overlayView}
             Spacer()
             
             switch vm.state {
-            case.recordingSpeech:
+            case .recordingSpeech:
                 cancelRecordingButton
                 
             case .processingSpeech, .playingSpeech:
@@ -50,13 +51,20 @@ struct ContentView: View {
         switch vm.state {
         case .idle, .error:
             startCaptureButton
+        case .processingSpeech:
+            Image(systemName: "brain")
+                .symbolEffect(.bounce.up.byLayer, options: .repeating, value: isSymbolAnimating).font(.system(size: 128)).onAppear{
+                    isSymbolAnimating = true
+                }.onDisappear{
+                    isSymbolAnimating = false
+                }
         default: EmptyView()
         }
     }
-    var startCaptureButton: some View{
+    var startCaptureButton: some View {
         Button {vm.startCaptureAudio() } label: {Image(systemName: "mic.circle").symbolRenderingMode(.multicolor).font(.system(size: 128))}.buttonStyle(.borderless)
     }
-    var cancelRecordingButton: some View{
+    var cancelRecordingButton: some View {
         Button(role: .destructive){
             vm.cancelRecording()
         } label: {
@@ -77,18 +85,20 @@ struct ContentView: View {
 #Preview("Recording Speech") {
     let vm = ViewModel()
     vm.state = .recordingSpeech
+    vm.audioPower = 0.2
     return ContentView(vm: vm)
 }
 
 #Preview("Processing Speech") {
     let vm = ViewModel()
-    vm.state = .recordingSpeech
+    vm.state = .processingSpeech
     return ContentView(vm: vm)
 }
 
 #Preview("Playing Speech") {
     let vm = ViewModel()
-    vm.state = .recordingSpeech
+    vm.state = .playingSpeech
+    vm.audioPower = 0.3
     return ContentView(vm: vm)
 }
 
