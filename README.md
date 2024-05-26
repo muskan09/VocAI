@@ -27,6 +27,8 @@ VocAI is an advanced AI voice assistant that leverages the latest technologies f
 - visionOS 1.0
 - [OpenAI API Key] (platform.openai.com) 
 - Add your API key in the ViewModel.swift file and build it again.
+- Add the Siri Wave Form package from [https://github.com/muskan09/SiriWaveView]. This package exposes the view as an SPM Library, making it easily integratable into modern SwiftUI projects.
+- Add the Open AI client package from [https://github.com/muskan09/VocaAIOpenAIClient]. This pacakage provides Authentication Middleware to inject API Key to Authorization Header.
 
 ## License
 
