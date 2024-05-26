@@ -12,7 +12,7 @@ import XCAOpenAIClient
 @Observable
 class ViewModel: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
-    let client = OpenAIClient(apiKey: "")
+    let client = OpenAIClient(apiKey: "YourApiKeyWillGoHere")
     var audioPlayer: AVAudioPlayer!
     var audioRecorder: AVAudioRecorder!
     
@@ -23,6 +23,7 @@ class ViewModel: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     var recordingTimer: Timer?
     var audioPower = 0.0
     var prevAudioPower: Double?
+    var processingSpeechTask: Task<Void, Never>?
     
     var selectedVoice = VoiceType.alloy
     
@@ -120,10 +121,34 @@ class ViewModel: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         resetValues()
         do{
             let data = try Data(contentsOf: captureURL)
-            try playAudio(data: data)
+            //try playAudio(data: data)
+            processingSpeechTask = processSpeechTask(audioData: data)
         } catch {
             state = .error(error)
             resetValues()
+        }
+    }
+    
+    func processSpeechTask(audioData: Data) -> Task<Void, Never> {
+        Task { @MainActor [unowned self] in
+            do{
+                self.state = .processingSpeech
+                let prompt = try await client.generateAudioTransciptions(audioData: audioData)
+                
+                try Task.checkCancellation()
+                let responseText = try await client.promptChatGPT(prompt: prompt)
+                
+                try Task.checkCancellation()
+                let data = try await client.generateSpeechFrom(input: responseText, voice: .init(rawValue: selectedVoice.rawValue) ?? .alloy)
+                
+                try Task.checkCancellation()
+                try self.playAudio(data: data)
+                
+            } catch {
+                if Task.isCancelled { return }
+                state = .error(error)
+                resetValues()
+            }
         }
     }
     
@@ -149,7 +174,10 @@ class ViewModel: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     }
     
     func cancelProcessingTask() {
-        
+        processingSpeechTask?.cancel()
+        processingSpeechTask = nil
+        resetValues()
+        state = .idle
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
