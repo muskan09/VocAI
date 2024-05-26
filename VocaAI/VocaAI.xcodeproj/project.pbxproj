@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3210FF442C010EE700890F61 /* VocaAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210FF432C010EE700890F61 /* VocaAIApp.swift */; };
+		3210FF462C010EE700890F61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210FF452C010EE700890F61 /* ContentView.swift */; };
+		3210FF482C010EE900890F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3210FF472C010EE900890F61 /* Assets.xcassets */; };
+		3210FF4C2C010EE900890F61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3210FF4B2C010EE900890F61 /* Preview Assets.xcassets */; };
+		3210FF562C010EE900890F61 /* VocaAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210FF552C010EE900890F61 /* VocaAITests.swift */; };
+		3210FF602C010EE900890F61 /* VocaAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210FF5F2C010EE900890F61 /* VocaAIUITests.swift */; };
+		3210FF622C010EE900890F61 /* VocaAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3210FF612C010EE900890F61 /* VocaAIUITestsLaunchTests.swift */; };
+		32977A6B2C0113C30047EB5C /* SiriWaveView in Frameworks */ = {isa = PBXBuildFile; productRef = 32977A6A2C0113C30047EB5C /* SiriWaveView */; };
+		32977A6E2C0114070047EB5C /* XCAOpenAIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 32977A6D2C0114070047EB5C /* XCAOpenAIClient */; };
+		32977A702C011BC20047EB5C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32977A6F2C011BC20047EB5C /* Models.swift */; };
+		32977A722C011CF40047EB5C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32977A712C011CF40047EB5C /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3210FF522C010EE900890F61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3210FF382C010EE700890F61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3210FF3F2C010EE700890F61;
+			remoteInfo = VocaAI;
+		};
+		3210FF5C2C010EE900890F61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3210FF382C010EE700890F61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3210FF3F2C010EE700890F61;
+			remoteInfo = VocaAI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3210FF402C010EE700890F61 /* VocaAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocaAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3210FF432C010EE700890F61 /* VocaAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaAIApp.swift; sourceTree = "<group>"; };
+		3210FF452C010EE700890F61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3210FF472C010EE900890F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3210FF492C010EE900890F61 /* VocaAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VocaAI.entitlements; sourceTree = "<group>"; };
+		3210FF4B2C010EE900890F61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3210FF512C010EE900890F61 /* VocaAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocaAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3210FF552C010EE900890F61 /* VocaAITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaAITests.swift; sourceTree = "<group>"; };
+		3210FF5B2C010EE900890F61 /* VocaAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocaAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3210FF5F2C010EE900890F61 /* VocaAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaAIUITests.swift; sourceTree = "<group>"; };
+		3210FF612C010EE900890F61 /* VocaAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		32977A6F2C011BC20047EB5C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		32977A712C011CF40047EB5C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3210FF3D2C010EE700890F61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32977A6E2C0114070047EB5C /* XCAOpenAIClient in Frameworks */,
+				32977A6B2C0113C30047EB5C /* SiriWaveView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3210FF4E2C010EE900890F61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3210FF582C010EE900890F61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3210FF372C010EE700890F61 = {
+			isa = PBXGroup;
+			children = (
+				3210FF422C010EE700890F61 /* VocaAI */,
+				3210FF542C010EE900890F61 /* VocaAITests */,
+				3210FF5E2C010EE900890F61 /* VocaAIUITests */,
+				3210FF412C010EE700890F61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3210FF412C010EE700890F61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3210FF402C010EE700890F61 /* VocaAI.app */,
+				3210FF512C010EE900890F61 /* VocaAITests.xctest */,
+				3210FF5B2C010EE900890F61 /* VocaAIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3210FF422C010EE700890F61 /* VocaAI */ = {
+			isa = PBXGroup;
+			children = (
+				3210FF432C010EE700890F61 /* VocaAIApp.swift */,
+				3210FF452C010EE700890F61 /* ContentView.swift */,
+				3210FF472C010EE900890F61 /* Assets.xcassets */,
+				3210FF492C010EE900890F61 /* VocaAI.entitlements */,
+				3210FF4A2C010EE900890F61 /* Preview Content */,
+				32977A6F2C011BC20047EB5C /* Models.swift */,
+				32977A712C011CF40047EB5C /* ViewModel.swift */,
+			);
+			path = VocaAI;
+			sourceTree = "<group>";
+		};
+		3210FF4A2C010EE900890F61 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3210FF4B2C010EE900890F61 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3210FF542C010EE900890F61 /* VocaAITests */ = {
+			isa = PBXGroup;
+			children = (
+				3210FF552C010EE900890F61 /* VocaAITests.swift */,
+			);
+			path = VocaAITests;
+			sourceTree = "<group>";
+		};
+		3210FF5E2C010EE900890F61 /* VocaAIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3210FF5F2C010EE900890F61 /* VocaAIUITests.swift */,
+				3210FF612C010EE900890F61 /* VocaAIUITestsLaunchTests.swift */,
+			);
+			path = VocaAIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3210FF3F2C010EE700890F61 /* VocaAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3210FF652C010EE900890F61 /* Build configuration list for PBXNativeTarget "VocaAI" */;
+			buildPhases = (
+				3210FF3C2C010EE700890F61 /* Sources */,
+				3210FF3D2C010EE700890F61 /* Frameworks */,
+				3210FF3E2C010EE700890F61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VocaAI;
+			packageProductDependencies = (
+				32977A6A2C0113C30047EB5C /* SiriWaveView */,
+				32977A6D2C0114070047EB5C /* XCAOpenAIClient */,
+			);
+			productName = VocaAI;
+			productReference = 3210FF402C010EE700890F61 /* VocaAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3210FF502C010EE900890F61 /* VocaAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3210FF682C010EE900890F61 /* Build configuration list for PBXNativeTarget "VocaAITests" */;
+			buildPhases = (
+				3210FF4D2C010EE900890F61 /* Sources */,
+				3210FF4E2C010EE900890F61 /* Frameworks */,
+				3210FF4F2C010EE900890F61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3210FF532C010EE900890F61 /* PBXTargetDependency */,
+			);
+			name = VocaAITests;
+			productName = VocaAITests;
+			productReference = 3210FF512C010EE900890F61 /* VocaAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3210FF5A2C010EE900890F61 /* VocaAIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3210FF6B2C010EE900890F61 /* Build configuration list for PBXNativeTarget "VocaAIUITests" */;
+			buildPhases = (
+				3210FF572C010EE900890F61 /* Sources */,
+				3210FF582C010EE900890F61 /* Frameworks */,
+				3210FF592C010EE900890F61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3210FF5D2C010EE900890F61 /* PBXTargetDependency */,
+			);
+			name = VocaAIUITests;
+			productName = VocaAIUITests;
+			productReference = 3210FF5B2C010EE900890F61 /* VocaAIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3210FF382C010EE700890F61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					3210FF3F2C010EE700890F61 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					3210FF502C010EE900890F61 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3210FF3F2C010EE700890F61;
+					};
+					3210FF5A2C010EE900890F61 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 3210FF3F2C010EE700890F61;
+					};
+				};
+			};
+			buildConfigurationList = 3210FF3B2C010EE700890F61 /* Build configuration list for PBXProject "VocaAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3210FF372C010EE700890F61;
+			packageReferences = (
+				32977A692C0113C30047EB5C /* XCRemoteSwiftPackageReference "SiriWaveView" */,
+				32977A6C2C0114070047EB5C /* XCRemoteSwiftPackageReference "VocaAIOpenAIClient" */,
+			);
+			productRefGroup = 3210FF412C010EE700890F61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3210FF3F2C010EE700890F61 /* VocaAI */,
+				3210FF502C010EE900890F61 /* VocaAITests */,
+				3210FF5A2C010EE900890F61 /* VocaAIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3210FF3E2C010EE700890F61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3210FF4C2C010EE900890F61 /* Preview Assets.xcassets in Resources */,
+				3210FF482C010EE900890F61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3210FF4F2C010EE900890F61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3210FF592C010EE900890F61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3210FF3C2C010EE700890F61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32977A702C011BC20047EB5C /* Models.swift in Sources */,
+				3210FF462C010EE700890F61 /* ContentView.swift in Sources */,
+				32977A722C011CF40047EB5C /* ViewModel.swift in Sources */,
+				3210FF442C010EE700890F61 /* VocaAIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3210FF4D2C010EE900890F61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3210FF562C010EE900890F61 /* VocaAITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3210FF572C010EE900890F61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3210FF602C010EE900890F61 /* VocaAIUITests.swift in Sources */,
+				3210FF622C010EE900890F61 /* VocaAIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3210FF532C010EE900890F61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3210FF3F2C010EE700890F61 /* VocaAI */;
+			targetProxy = 3210FF522C010EE900890F61 /* PBXContainerItemProxy */;
+		};
+		3210FF5D2C010EE900890F61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3210FF3F2C010EE700890F61 /* VocaAI */;
+			targetProxy = 3210FF5C2C010EE900890F61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3210FF632C010EE900890F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3210FF642C010EE900890F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3210FF662C010EE900890F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VocaAI/VocaAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VocaAI/Preview Content\"";
+				DEVELOPMENT_TEAM = 5NCUX63SYS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Talk with VocaAI";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muskankalsi.VocaAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		3210FF672C010EE900890F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VocaAI/VocaAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VocaAI/Preview Content\"";
+				DEVELOPMENT_TEAM = 5NCUX63SYS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Talk with VocaAI";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muskankalsi.VocaAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		3210FF692C010EE900890F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5NCUX63SYS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muskankalsi.VocaAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VocaAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VocaAI";
+			};
+			name = Debug;
+		};
+		3210FF6A2C010EE900890F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5NCUX63SYS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muskankalsi.VocaAITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VocaAI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VocaAI";
+			};
+			name = Release;
+		};
+		3210FF6C2C010EE900890F61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5NCUX63SYS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muskankalsi.VocaAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VocaAI;
+			};
+			name = Debug;
+		};
+		3210FF6D2C010EE900890F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5NCUX63SYS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.muskankalsi.VocaAIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VocaAI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3210FF3B2C010EE700890F61 /* Build configuration list for PBXProject "VocaAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3210FF632C010EE900890F61 /* Debug */,
+				3210FF642C010EE900890F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3210FF652C010EE900890F61 /* Build configuration list for PBXNativeTarget "VocaAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3210FF662C010EE900890F61 /* Debug */,
+				3210FF672C010EE900890F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3210FF682C010EE900890F61 /* Build configuration list for PBXNativeTarget "VocaAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3210FF692C010EE900890F61 /* Debug */,
+				3210FF6A2C010EE900890F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3210FF6B2C010EE900890F61 /* Build configuration list for PBXNativeTarget "VocaAIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3210FF6C2C010EE900890F61 /* Debug */,
+				3210FF6D2C010EE900890F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32977A692C0113C30047EB5C /* XCRemoteSwiftPackageReference "SiriWaveView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muskan09/SiriWaveView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		32977A6C2C0114070047EB5C /* XCRemoteSwiftPackageReference "VocaAIOpenAIClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muskan09/VocaAIOpenAIClient";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32977A6A2C0113C30047EB5C /* SiriWaveView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32977A692C0113C30047EB5C /* XCRemoteSwiftPackageReference "SiriWaveView" */;
+			productName = SiriWaveView;
+		};
+		32977A6D2C0114070047EB5C /* XCAOpenAIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32977A6C2C0114070047EB5C /* XCRemoteSwiftPackageReference "VocaAIOpenAIClient" */;
+			productName = XCAOpenAIClient;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3210FF382C010EE700890F61 /* Project object */;
+}
