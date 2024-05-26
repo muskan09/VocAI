@@ -1,7 +1,7 @@
 # VocAI
 
 ## Overview
-VocAI is an advanced AI voice assistant that leverages the latest technologies from OpenAI. Built with Swift UI, this app is designed to provide seamless support across iOS, macOS, and visionOS using a single codebase. VocAI transforms the way you interact with your devices by converting your speech into text and then responding with natural-sounding speech.
+VocAI (named after a clever word play on the word "vocal") is an advanced AI voice assistant that leverages the latest technologies from OpenAI. Built with Swift UI, this app is designed to provide seamless support across iOS, macOS, and visionOS using a single codebase. VocAI transforms the way you interact with your devices by converting your speech into text and then responding with natural-sounding speech.
 
 <img src="img1.jpeg" width="252"/>
 
